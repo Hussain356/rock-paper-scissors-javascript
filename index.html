@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Play Rock Paper Scissors against the computer, with a scoreboard, keyboard shortcuts and a mobile-friendly layout." />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="scoreboard" aria-label="Scoreboard">
+        <div class="score user_score"><span class="label">You</span><strong id="score-user">0</strong></div>
+        <div class="score draw_score"><span class="label">Draws</span><strong id="score-draw">0</strong></div>
+        <div class="score cpu_score"><span class="label">CPU</span><strong id="score-cpu">0</strong></div>
+      </div>
+
+      <div class="result_field">
+        <div class="result_images">
+          <span class="user_result">
+            <img src="images/rock.png" alt="Your choice" />
+          </span>
+          <span class="cpu_result">
+            <img src="images/rock.png" alt="CPU choice" />
+          </span>
+        </div>
+        <div class="result" role="status" aria-live="polite">Let's Play!!</div>
+      </div>
+
+      <div class="option_images">
+        <button type="button" class="option_image" data-choice="rock" aria-label="Rock (press R)">
+          <img src="images/rock.png" alt="" />
+          <p>Rock</p>
+          <kbd>R</kbd>
+        </button>
+        <button type="button" class="option_image" data-choice="paper" aria-label="Paper (press P)">
+          <img src="images/paper.png" alt="" />
+          <p>Paper</p>
+          <kbd>P</kbd>
+        </button>
+        <button type="button" class="option_image" data-choice="scissors" aria-label="Scissors (press S)">
+          <img src="images/scissors.png" alt="" />
+          <p>Scissors</p>
+          <kbd>S</kbd>
+        </button>
+      </div>
+
+      <button type="button" class="reset" id="reset">Reset score</button>
+    </section>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
